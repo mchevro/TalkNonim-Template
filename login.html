@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>Sign In To TalkNonim - Menerima Atau Mengirim Saran Secara Anonim</title>
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <style>
+            /*Font TalkNonim*/
+            @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap');
+            /*Font Kirim Pesan Mu*/
+            @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+            html {
+                box-sizing: border-box;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: inherit;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .wave-container {
+                position: relative;
+                overflow: hidden;
+                background: #4e54c8;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #8f94fb, #4e54c8);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            .wave-container>svg {
+                display: block;
+            }
+
+            @keyframes animateWave {
+                0% {
+                    transform: scale(1, 0);
+                }
+
+                100% {
+                    transform: scale(1, 1);
+                }
+            }
+
+            .wave-container>svg {
+                display: block;
+                transform-origin: bottom;
+                animation: animateWave 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+            }
+
+            .bg-buttonCus {
+                background: #4e54c8;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #8f94fb, #4e54c8);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            .bg-buttonCus:hover {
+                color: #f8f9fa;
+                border-color: #f8f9fa;
+                background: #43479b;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #797ed3, #383d8f);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #797ed3, #383d8f);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            .text-core h1 {
+                font-size: 60px;
+                color: #f8f9fa;
+                font-family: 'Exo 2', sans-serif;
+                font-weight: bolder;
+            }
+
+            .text-core p {
+                color: #f8f9fa;
+            }
+
+            .text-subCore h3{
+                color: #f8f9fa;
+                font-family: 'Exo 2', sans-serif;
+            }
+
+            .card-custom {
+                width: 30rem; 
+                margin-left: -15rem; 
+                left: 50%;
+                border-radius: 10px;
+                box-shadow: 8px 3px 65px -34px rgba(255,255,255,0.75);
+                -webkit-box-shadow: 8px 3px 65px -34px rgba(255,255,255,0.75);
+                -moz-box-shadow: 8px 3px 65px -34px rgba(255,255,255,0.75);
+            }
+
+            .footerInfo{
+                background-color: transparent;
+                border-color: transparent;
+                width: 30rem; 
+                margin-left: -15rem; 
+                left: 50%;
+                margin-top: -25px;
+            }
+
+            @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+                .card-custom, .footerInfo{
+                    width: 20rem;
+                    margin-left: -10rem;  
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wave-container">
+
+            <div class="container mt-4">
+
+                <div class="text-subCore text-center">
+                    <img src="assets/img/talk.png" alt="LogoTalkNonim" width="90" class="mb-2">
+                    <h3>Sign In To TalkNonim</h3>
+                </div>
+
+                <div class="card card-custom mb-5" data-aos="flip-right">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <form class="needs-validation" novalidate>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" required>
+                                <label>Username</label>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please input a username.
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" required>
+                                <label>Password</label>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please input a password.
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-outline-light mt-2 bg-buttonCus">Sign In</button>
+                            <hr>
+                            <p>New to TalkNonim? <a href="register.html" style="text-decoration: none;">Create an account.</a></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="card footerInfo text-center">
+                    <div class="row">
+                        <div class="col-4">
+                            <a href="" class="text-light" style="text-decoration: none;">Syarat</a>
+                        </div>
+                        <div class="col-4">
+                            <a href="" class="text-light" style="text-decoration: none;">Bantuan</a>
+                        </div>
+                        <div class="col-4">
+                            <a href="" class="text-light" style="text-decoration: none;">Privasi</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#fff" fill-opacity="1" d="M0,224L80,186.7C160,149,320,75,480,74.7C640,75,800,149,960,154.7C1120,160,1280,96,1360,64L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+            </svg>
+
+        </div>
+
+        <div>
+            <p class="text-center fw-bolder text-secondary">Copyright @2022 | Powered by <a href="#" style="text-decoration: none;">Faldi Ramadhan</a></p>
+        </div>
+
+        <!--AOS JS-->
+        <script>
+            AOS.init();
+        </script>
+
+        <!--FORM VALIDATION BS5-->
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+                })
+            })()
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>

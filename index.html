@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>TalkNonim - Menerima Atau Mengirim Saran Secara Anonim</title>
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <style>
+            /*Font TalkNonim*/
+            @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap');
+            /*Font Kirim Pesan Mu*/
+            @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+            html {
+                box-sizing: border-box;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: inherit;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .wave-container {
+                position: relative;
+                overflow: hidden;
+                background: #4e54c8;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #8f94fb, #4e54c8);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            .wave-container>svg {
+                display: block;
+            }
+
+            @keyframes animateWave {
+                0% {
+                    transform: scale(1, 0);
+                }
+
+                100% {
+                    transform: scale(1, 1);
+                }
+            }
+
+            .wave-container>svg {
+                display: block;
+                transform-origin: bottom;
+                animation: animateWave 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+            }
+
+            .bg-buttonCus {
+                background: #4e54c8;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #8f94fb, #4e54c8);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            .bg-buttonCus:hover {
+                color: #f8f9fa;
+                border-color: #f8f9fa;
+                background: #43479b;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #797ed3, #383d8f);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #797ed3, #383d8f);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            .text-core h1 {
+                font-size: 60px;
+                color: #f8f9fa;
+                font-family: 'Exo 2', sans-serif;
+                font-weight: bolder;
+            }
+
+            .text-core p {
+                color: #f8f9fa;
+            }
+
+            .text-subCore h3{
+                color: #f8f9fa;
+                font-family: 'Exo 2', sans-serif;
+            }
+
+            .card-custom {
+                width: 30rem; 
+                margin-left: -15rem; 
+                left: 50%;
+                border-radius: 10px;
+            }
+            @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+                .card-custom{
+                width: 20rem;
+                margin-left: -10rem;  
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wave-container">
+
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark fw-bold">
+                    <div class="container-fluid">
+                        <span class="navbar-brand mb-0 h1 fw-bold">TalkNonim</span>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse ms-5" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="login.html">Sign In</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d-flex">
+                            <a href="register.html" class="btn btn-sm btn-outline-light bg-buttonCus">Try Now</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="text-core text-center mb-5" data-aos="zoom-in">
+                    <h1>TalkNonim</h1>
+                    <p>Sebuah Aplikasi Sederhana Yang Berguna Untuk Menyampaikan Pesan Ke Orang Dengan Fitur Anonim</p>
+                </div>
+
+                <div class="text-subCore text-center">
+                    <h3>Kirim Pesan Mu</h3>
+                </div>
+
+                <div class="card card-custom mb-5" data-aos="flip-right">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <form class="needs-validation" novalidate>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" placeholder="Anonim" value="Anonim" required>
+                                <label>Dari</label>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please input a name.
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" placeholder="User" value="@user" required>
+                                <label>Kepada</label>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please input a username.
+                                </div>
+                            </div>
+                            <div class="form-floating">
+                                <textarea type="text" class="form-control" placeholder="Pesan" style="height: 100px" required></textarea>
+                                <label>Pesan</label>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please input a message.
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-outline-light mt-2 bg-buttonCus">Kirim</button>
+                            <hr>
+                            <p>Anda mau mencoba juga? <a href="register.html" style="text-decoration: none;">Klik Disini</a></p>
+                        </form>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-up">
+                    <div class="text-subCore text-center mt-4">
+                        <h3>Seputar Pertanyaan</h3>
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Cara Kerja App Ini Seperti Apa? </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Apakah Privasi Pengirim Aman? </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Apakah TalkNonim Mengumpulkan Data Pengguna?  </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#fff" fill-opacity="1" d="M0,224L80,186.7C160,149,320,75,480,74.7C640,75,800,149,960,154.7C1120,160,1280,96,1360,64L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+            </svg>
+
+        </div>
+
+        <div>
+            <p class="text-center fw-bolder text-secondary">Copyright @2022 | Powered by <a href="#" style="text-decoration: none;">Faldi Ramadhan</a></p>
+        </div>
+
+        <!--AOS JS-->
+        <script>
+            AOS.init();
+        </script>
+
+        <!--FORM VALIDATION BS5-->
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+                })
+            })()
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
